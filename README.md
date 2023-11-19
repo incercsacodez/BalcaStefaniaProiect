@@ -1,0 +1,2 @@
+# BalcaStefaniaProiect
+My C++ project
