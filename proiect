@@ -1,0 +1,124 @@
+#include<iostream>
+using namespace std;
+
+
+class Tickets {
+private:
+    
+    int ticketID;
+    string movieTitle;
+    int seatNumber;
+    double price;
+
+public:
+    Tickets(int id) : ticketID(id), movieTitle(""), seatNumber(0), price(0.0) 
+    {
+    
+    }
+
+    Tickets(int id, const string& title, int seat, double ticketPrice)
+        : ticketID(id), movieTitle(title), seatNumber(seat), price(ticketPrice)
+    {
+    
+    }
+
+   
+    void setTicketID(int id)
+    {
+        ticketID = id;
+    }
+
+    int getTicketID() const
+    {
+        return ticketID;
+    }
+
+    void setMovieTitle(const string& title) {
+        movieTitle = title;
+    }
+
+    const string& getMovieTitle() const {
+        return movieTitle;
+    }
+
+    void setSeatNumber(int seat) {
+        seatNumber = seat;
+    }
+
+    int getSeatNumber() const {
+        return seatNumber;
+    }
+
+    void setPrice(double ticketPrice) {
+        price = ticketPrice;
+    }
+
+    double getPrice() const {
+        return price;
+    }
+
+    // Display ticket information
+    void displayTicket() const {
+        cout <<endl<< "Ticket ID: " << ticketID;
+        cout <<endl<< "Movie Title: " << movieTitle;
+        cout << endl<<"Seat Number: " << seatNumber;
+        cout << endl<< "Price: $" << price;
+    }
+};
+
+class CinemaProgram {
+private:
+    
+    string movieTitle;
+    int showtime;
+    int duration;
+
+public:
+    // Constructors
+    CinemaProgram() : movieTitle(""), showtime(0), duration(0) 
+    {
+
+    }
+
+    CinemaProgram(const std::string& title, int time, int movieDuration)
+        : movieTitle(title), showtime(time), duration(movieDuration) {}
+
+    // Member functions to set and get values
+    void setMovieTitle(const std::string& title) {
+        movieTitle = title;
+    }
+
+    const std::string& getMovieTitle() const {
+        return movieTitle;
+    }
+
+    void setShowtime(int time) {
+        showtime = time;
+    }
+
+    int getShowtime() const {
+        return showtime;
+    }
+
+    void setDuration(int movieDuration) {
+        duration = movieDuration;
+    }
+
+    int getDuration() const {
+        return duration;
+    }
+
+    // Display program information
+    void displayProgram() const {
+        cout << "Movie Title: " << movieTitle << "\n";
+        cout << "Showtime: " << showtime << " (24-hour format)\n";
+       cout << "Duration: " << duration << " minutes\n";
+    }
+};
+
+
+
+int main() {
+
+
+}
